@@ -1,0 +1,24 @@
+2026-09-07T18:09:13.183532900 - Favoritos listados: 5 Pokemon
+2026-09-07T18:09:32.229129900 - Todos os Pokemon listados: 1351 Pokemon
+2026-09-07T18:09:49.367486300 - Pokemon consultado: scizor (ID 212)
+2026-09-07T18:09:53.863415200 - Pokemon favoritado: scizor (ID 212)
+2026-09-07T18:10:14.559717200 - Pokemon favoritado: gengar (ID 94)
+2026-09-07T18:12:51.251174400 - Pokemon desfavoritado: ID 1
+2026-09-07T18:12:57.841298400 - Favoritos listados: 6 Pokemon
+2026-09-07T18:13:07.449417100 - Favoritos listados: 6 Pokemon
+2026-09-07T18:13:12.813366600 - Pokemon desfavoritado: ID 212
+2026-09-07T18:13:20.400064600 - Pokemon desfavoritado: ID 6
+2026-09-07T18:13:26.822144400 - Pokemon desfavoritado: ID 25
+2026-09-07T18:13:32.646120400 - Favoritos listados: 3 Pokemon
+2026-09-07T18:13:41.599187500 - Pokemon desfavoritado: ID 655
+2026-09-07T18:13:53.987004900 - Pokemon desfavoritado: ID 809
+2026-09-07T18:14:07.005982 - Pokemon desfavoritado: ID 94
+2026-09-07T18:14:09.550221100 - Favoritos listados: 0 Pokemon
+2026-09-07T18:14:18.221147400 - Pokemon favoritado: scizor (ID 212)
+2026-09-07T18:14:21.057636600 - Favoritos listados: 1 Pokemon
+2026-09-07T18:14:28.222544400 - Pokemon favoritado: gengar (ID 94)
+2026-09-07T18:14:32.682614900 - Pokemon favoritado: delphox (ID 655)
+2026-09-07T18:14:51.460183300 - Pokemon favoritado: pikachu (ID 25)
+2026-09-07T18:15:00.772829700 - Pokemon favoritado: charizard (ID 6)
+2026-09-07T18:15:11.201620400 - Pokemon favoritado: melmetal (ID 809)
+2026-09-07T18:15:14.156738200 - Favoritos listados: 6 Pokemon
