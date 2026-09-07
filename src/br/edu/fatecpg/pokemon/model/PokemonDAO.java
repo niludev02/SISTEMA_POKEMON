@@ -19,13 +19,15 @@ public class PokemonDAO {
         try (Connection connection = Conexao.conectar();
             PreparedStatement stmt = connection.prepareStatement(query)) {
 
-            stmt.setInt(1, pokemon.getId_pokemon());
-            stmt.setString(2, pokemon.getNome());
-            stmt.setString(3, pokemon.getTipo());
-            stmt.setDouble(4, pokemon.getAltura());
-            stmt.setDouble(5, pokemon.getPeso());
-            stmt.setDouble(6, pokemon.getExperiencia_base());
+            stmt.setInt(1, pokemon.getId());
+            stmt.setString(2, pokemon.getName());
+            stmt.setString(3, obterNomeTipo(pokemon.getTypes()));
+            stmt.setDouble(4, pokemon.getHeight());
+            stmt.setDouble(5, pokemon.getWeight());
+            stmt.setDouble(6, pokemon.getBase_experience());
             stmt.executeUpdate();
+        } catch (SQLException e) {
+            System.out.print("Pokemon ja favoritado!");
         }
     }
 
@@ -56,13 +58,33 @@ public class PokemonDAO {
     }
 
     private Pokemon mapearPokemon(ResultSet rs) throws SQLException {
-        return new Pokemon(
-                rs.getInt("id_pokemon"),
-                rs.getString("nome"),
-                rs.getString("tipo"),
-                rs.getDouble("altura"),
-                rs.getDouble("peso"),
-                rs.getDouble("experiencia_base")
-        );
+        Pokemon pokemon = new Pokemon();
+        pokemon.setId(rs.getInt("id_pokemon"));
+        pokemon.setName(rs.getString("nome"));
+        pokemon.setTypes(criarTipos(rs.getString("tipo")));
+        pokemon.setHeight(rs.getDouble("altura"));
+        pokemon.setWeight(rs.getDouble("peso"));
+        pokemon.setBase_experience(rs.getDouble("experiencia_base"));
+        return pokemon;
+    }
+
+    private List<TypeSlot> criarTipos(String nomeTipo) {
+        TypeInfo typeInfo = new TypeInfo();
+        typeInfo.setName(nomeTipo);
+
+        TypeSlot typeSlot = new TypeSlot();
+        typeSlot.setSlot(1);
+        typeSlot.setType(typeInfo);
+
+        List<TypeSlot> types = new ArrayList<>();
+        types.add(typeSlot);
+        return types;
+    }
+
+    private String obterNomeTipo(List<TypeSlot> types) {
+        if (types == null || types.isEmpty() || types.get(0).getType() == null) {
+            return "desconhecido";
+        }
+        return types.get(0).getType().getName();
     }
 }

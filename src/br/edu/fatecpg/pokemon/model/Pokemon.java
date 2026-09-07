@@ -1,66 +1,74 @@
 package br.edu.fatecpg.pokemon.model;
 
+import java.util.List;
+
 public class Pokemon {
-    private int id_pokemon;
-    private String nome;
-    private String tipo;
-    private double altura;
-    private double peso;
-    private double experiencia_base;
+    private int id;
+    private String name;
+    private List<TypeSlot> types;
+    private double height;
+    private double weight;
+    private double base_experience;
 
-    public Pokemon(int id_pokemon, String nome, String tipo, double altura, double peso, double experiencia_base) {
-        this.id_pokemon = id_pokemon;
-        this.nome = nome;
-        this.tipo = tipo;
-        this.altura = altura;
-        this.peso = peso;
-        this.experiencia_base = experiencia_base;
+    public Pokemon() {
     }
 
-    public int getId_pokemon() {
-        return id_pokemon;
+    public int getId() {
+        return id;
     }
 
-    public void setId_pokemon(int id_pokemon) {
-        this.id_pokemon = id_pokemon;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getTipo() {
-        return tipo;
+    public List<TypeSlot> getTypes() {
+        return types;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setTypes(List<TypeSlot> types) {
+        this.types = types;
     }
 
-    public double getAltura() {
-        return altura;
+    public double getHeight() {
+        return height;
     }
 
-    public double getPeso() {
-        return peso;
+    public void setHeight(double height) {
+        this.height = height;
     }
 
-    public double getExperiencia_base() {
-        return experiencia_base;
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public double getBase_experience() {
+        return base_experience;
+    }
+
+    public void setBase_experience(double base_experience) {
+        this.base_experience = base_experience;
     }
 
     @Override
     public String toString() {
         return "Pokemon: " +
-                "id_pokemon: " + id_pokemon +
-                ", nome: " + nome +
-                ", tipo: " + tipo +
-                ", altura: " + altura +
-                ", peso: " + peso +
-                ", experiencia_base: " + experiencia_base;
+                "id: " + id +
+                ", name: " + name +
+                ", types: " + types +
+                ", height: " + height +
+                ", weight: " + weight +
+                ", base_experience: " + base_experience;
     }
 }
